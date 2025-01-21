@@ -1,20 +1,20 @@
 // Initial count value
-let count : number = 0;
+let count: number = 0;
 
 // Update the count display
-const updateCountDisplay = () : void => {
-    const countElement = document.getElementById('count');
+const updateCountDisplay = (): void => {
+    const countElement = document.getElementById('count') as HTMLElement;
     countElement.textContent = count.toString();
 };
 
 // Increment the count
-const increment = () : void => {
+const increment = (): void => {
     count += 1;
     updateCountDisplay();
 };
 
 // Decrement the count
-const decrement = () : void => {
+const decrement = (): void => {
     count -= 1;
     updateCountDisplay();
 };
@@ -30,6 +30,6 @@ const incrementButton = document.getElementById('increment-button') as HTMLButto
 const decrementButton = document.getElementById('decrement-button') as HTMLButtonElement;
 const resetButton = document.getElementById('reset-button') as HTMLButtonElement;
 
-incrementButton.click = increment;
-decrementButton.click = decrement;
-resetButton.click = reset
+incrementButton.onclick = increment;
+decrementButton.onclick = decrement;
+resetButton.onclick = reset;

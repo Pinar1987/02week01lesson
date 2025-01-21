@@ -1,29 +1,31 @@
 // Initial count value
-var count = 0;
+let count = 0;
+
 // Update the count display
-var updateCountDisplay = function () {
-    var countElement = document.getElementById('count');
-    countElement.textContent = count.toString();
+const updateCountDisplay = () => {
+    const countElement = document.getElementById('count');
+    countElement.textContent = count;
 };
+
 // Increment the count
-var increment = function () {
+const increment = () => {
     count += 1;
     updateCountDisplay();
 };
+
 // Decrement the count
-var decrement = function () {
+const decrement = () => {
     count -= 1;
     updateCountDisplay();
 };
+
 // Reset the count
-var reset = function () {
+const reset = () => {
     count = 0;
     updateCountDisplay();
 };
+
 // Attach event listeners to buttons
-var incrementButton = document.getElementById('increment-button');
-var decrementButton = document.getElementById('decrement-button');
-var resetButton = document.getElementById('reset-button');
-incrementButton.click = increment;
-decrementButton.click = decrement;
-resetButton.click = reset;
+document.getElementById('increment-button').onclick = increment;
+document.getElementById('decrement-button').onclick = decrement;
+document.getElementById('reset-button').onclick = reset;
